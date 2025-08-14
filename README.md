@@ -1,6 +1,9 @@
 **DE⫶TR**: End-to-End Object Detection with Transformers
 ========
 
+This repo is a copy of original https://github.com/facebookresearch/detr.
+I will use this repo fr research purposes nly: investigate detr
+
 [![Support Ukraine](https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB)](https://opensource.fb.com/support-ukraine)
 
 PyTorch training code and pretrained models for **DETR** (**DE**tection **TR**ansformer).
