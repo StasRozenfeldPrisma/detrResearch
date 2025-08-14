@@ -1,1 +1,32 @@
+REM python 3.10  # 3.11 has no wheel for torch==1.13.1+cu116 due to torch==1.13.1+cu116 being too old
+REM Cuda 11.6 update 2
+REM CuDnn 8.5.0.96
+
+
+C:
+cd C:\Users\stas.rozenfeld\virtualenvs\p3_10_detrResearch
+"C:\Program Files\Python310\python.exe" -m venv C:\Users\stas.rozenfeld\virtualenvs\p3_10_detrResearch
+Scripts\activate
+
+python -m pip install --upgrade pip
+python -m pip install -U pip setuptools wheel
+
+REM python -m pip install --upgrade --force-reinstall --no-cache-dir numpy==1.26.4 scipy==1.11.4 scikit-image==0.22.0 matplotlib==3.8.4 contourpy==1.2.0 opencv-python==4.8.1.78 scikit-learn==1.3.2
+python -m pip install numpy==1.26.4 scipy==1.11.4 scikit-image==0.22.0 matplotlib==3.8.4 contourpy==1.2.0 opencv-python==4.8.1.78 scikit-learn==1.3.2
+pip install Cython==3.1.2
+
+REM pip install -U 'git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI'
+REM pip install git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
+REM pip install --use-pep517 --no-build-isolation git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI
+pip install pycocotools
+
+pip install git+https://github.com/cocodataset/panopticapi.git
+pip install submitit
+
+pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu116
+
+pip install onnxruntime-gpu==1.13.1 --extra-index-url https://aiinfra.pkgs.visualstudio.com/PublicPackages/_packaging/onnxruntime-cuda-11/pypi/simple/
+pip install onnx==1.12
+REM: Note. onnx==1.12 installation removed protobuf-6.31.1 and installed protobuf-3.20.1 instead
+
 
