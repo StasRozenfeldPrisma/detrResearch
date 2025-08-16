@@ -29,4 +29,7 @@ pip install onnxruntime-gpu==1.13.1 --extra-index-url https://aiinfra.pkgs.visua
 pip install onnx==1.12
 REM: Note. onnx==1.12 installation removed protobuf-6.31.1 and installed protobuf-3.20.1 instead
 
+pip install PyQt5==5.15.10
+pip install einops==0.6.1
+pip install einops-exts==0.0.4
 
